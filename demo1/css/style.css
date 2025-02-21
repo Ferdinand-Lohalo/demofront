@@ -1,3 +1,172 @@
-body{
-    background: red;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.headerNav {
+    background: #2a2e5e;
+    padding: 0px;
+}
+
+.container {
+    width: 80%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    max-height: 70px;
+}
+
+.links .linavlink {
+    list-style: none;
+}
+
+.navlink a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.navlink a:hover{
+    display: flex;
+    text-decoration: none;
+    color:  #0091ff;
+    /* color: #98aefd; */
+    align-items: center;
+    /* transform: scale(1.1); */
+}
+
+.separator {
+    color: rgb(219, 219, 219);
+    font-weight: 100;
+    list-style: none;
+    margin: 0 0;
+}
+nav span{
+    color: #0091ff;
+    font-weight: bold;
+}
+
+nav .we{
+    color: rgb(237, 255, 255);
+    background: #0091ff;
+    border-radius: 50%; /* Pour un arrière-plan totalement rond */
+    display: inline-block; /* Nécessaire pour que le background soit visible */
+    width: 40px; /* Taille ajustable selon vos besoins */
+    height: 40px; /* Taille ajustable selon vos besoins */
+    text-align: center; /* Centrer le texte à l'intérieur */
+    line-height: 40px; /* Centrer verticalement */
+    font-weight: bold;
+}
+nav ul .connexion {
+    margin-left: 10px;
+}
+
+nav ul .inscription {
+    margin-right: 10px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+nav .weKelo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+/* Page de bienvenu */
+.container .row{
+    display: flex;
+    gap: 40px;
+    margin: 40px;
+}
+.container .welcome{
+    margin-top: 60px;
+}
+.container .welcome h1{
+    color: #0BA4C6;
+}
+.container .welcome h1 span{
+    color: #035097;
+}
+.container .welcome p{
+    color: #035097;
+    padding-top: 10px;
+}
+.container .welcome .buttons{
+    margin-top: 30px;
+}
+.container .welcome .btnInscrit{
+    background: #0BA4C6;
+    border: 1px solid  #0BA4C6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 13px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.container .welcome .btnInscrit:hover{
+    background: #03596d;
+    border: 1px solid  #0BA4C6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 13px;
+    transform: scale(1.1);
+}
+.container .welcome .btnInscrit a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+.container .welcome .btnConnecter{
+    border: 2px solid  #0BA4C6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 13px;
+    transition: background 0.3s ease, transform 0.2s ease; 
+}
+.container .welcome .btnConnecter:hover{
+    background: #0BA4C6;
+    border: 2px solid  #0BA4C6;
+    padding: 10px;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+.container .welcome .btnConnecter a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bolder;
+    color: #0078E8;
+}
+.container .welcome .btnConnecter a:hover{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bolder;
+    color: #fff;
 }
