@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: "Poppins", serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 .headerNav {
@@ -13,21 +13,20 @@
 }
 
 .container {
-    width: 80%;
-    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 0;
+    width: 80%;
 }
 
 .navBar {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
     max-width: 1200px;
-    margin: 0 auto;
     max-height: 70px;
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
 }
 
 .links .linavlink {
@@ -35,19 +34,18 @@
 }
 
 .navlink a {
-    display: flex;
-    text-decoration: none;
-    color: #fff;
-    align-items: center;
     transition: color 0.3s ease, transform 0.2s ease;
-}
-.navlink a:hover{
-    display: flex;
     text-decoration: none;
-    color:  #0091ff;
-    /* color: #98aefd; */
     align-items: center;
-    /* transform: scale(1.1); */
+    display: flex;
+    color: #fff;
+}
+
+.navlink a:hover {
+    text-decoration: none;
+    align-items: center;
+    color: #0091ff;
+    display: flex;
 }
 
 .separator {
@@ -56,22 +54,24 @@
     list-style: none;
     margin: 0 0;
 }
-nav span{
+
+nav span {
     color: #0091ff;
     font-weight: bold;
 }
 
-nav .we{
+nav .we {
     color: rgb(237, 255, 255);
     background: #0091ff;
-    border-radius: 50%; /* Pour un arrière-plan totalement rond */
-    display: inline-block; /* Nécessaire pour que le background soit visible */
-    width: 40px; /* Taille ajustable selon vos besoins */
-    height: 40px; /* Taille ajustable selon vos besoins */
-    text-align: center; /* Centrer le texte à l'intérieur */
-    line-height: 40px; /* Centrer verticalement */
+    border-radius: 50%;         /* Pour un arrière-plan totalement rond */
+    display: inline-block;      /* Nécessaire pour que le background soit visible */
+    width: 40px;                /* Taille ajustable selon vos besoins */
+    height: 40px;               /* Taille ajustable selon vos besoins */
+    text-align: center;         /* Centrer le texte à l'intérieur */
+    line-height: 40px;          /* Centrer verticalement */
     font-weight: bold;
 }
+
 nav ul .connexion {
     margin-left: 10px;
 }
@@ -81,8 +81,8 @@ nav ul .inscription {
 }
 
 nav {
-    flex: 1;
     text-align: right;
+    flex: 1;
 }
 
 nav ul {
@@ -94,79 +94,571 @@ nav ul li {
     display: inline-block;
     margin: 0 20px;
 }
+
 nav .weKelo {
-    color: #fff;
     text-decoration: none;
     font-size: 40px;
+    color: #fff;
 }
 
 /* Page de bienvenu */
-.container .row{
+.container .row {
+    margin: 40px 0;
     display: flex;
     gap: 40px;
-    margin: 40px;
 }
-.container .welcome{
+
+.container .welcome {
     margin-top: 60px;
 }
-.container .welcome h1{
+
+.container .welcome h1 {
     color: #0BA4C6;
 }
-.container .welcome h1 span{
+
+.container .welcome h1 span {
     color: #035097;
 }
-.container .welcome p{
-    color: #035097;
+
+.container .welcome p {
     padding-top: 10px;
+    color: #035097;
 }
-.container .welcome .buttons{
+
+/* Traitement des buttons */
+.container .welcome .buttons {
     margin-top: 30px;
 }
-.container .welcome .btnInscrit{
-    background: #0BA4C6;
-    border: 1px solid  #0BA4C6;
-    padding: 10px;
-    border-radius: 5px;
-    margin-right: 13px;
+
+.container .welcome .btnInscrit {
     transition: color 0.3s ease, transform 0.2s ease;
-}
-.container .welcome .btnInscrit:hover{
-    background: #03596d;
-    border: 1px solid  #0BA4C6;
-    padding: 10px;
-    border-radius: 5px;
+    border: 1px solid #0BA4C6;
+    background: #0BA4C6;
     margin-right: 13px;
-    transform: scale(1.1);
-}
-.container .welcome .btnInscrit a{
-    text-decoration: none;
+    border-radius: 5px;
     padding: 10px;
+}
+
+.container .welcome .btnInscrit:hover {
+    border: 1px solid #0BA4C6;
+    transform: scale(1.1);
+    background: #fff;
+    margin-right: 13px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.container .welcome .btnInscrit a {
+    text-decoration: none;
     font-weight: bolder;
     color: #FFFFFF;
-}
-.container .welcome .btnConnecter{
-    border: 2px solid  #0BA4C6;
     padding: 10px;
+}
+
+.container .welcome .btnInscrit a:hover {
+    font-weight: bolder;
+    color: #0BA4C6;
+}
+
+.container .welcome .btnConnecter {
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid #0BA4C6;
     border-radius: 5px;
     margin-left: 13px;
-    transition: background 0.3s ease, transform 0.2s ease; 
-}
-.container .welcome .btnConnecter:hover{
-    background: #0BA4C6;
-    border: 2px solid  #0BA4C6;
     padding: 10px;
-    border-radius: 5px;
+}
+
+.container .welcome .btnConnecter:hover {
+    border: 2px solid #0BA4C6;
     transform: scale(1.1);
-}
-.container .welcome .btnConnecter a{
-    text-decoration: none;
+    background: #0BA4C6;
+    border-radius: 5px;
     padding: 10px;
+}
+
+.container .welcome .btnConnecter a {
+    text-decoration: none;
     font-weight: bolder;
+    color: #0BA4C6;
+    ;
+    padding: 10px;
+}
+
+.container .welcome .btnConnecter a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 10px;
+    color: #fff;
+}
+
+/* style pour la gestion des specialites */
+.specialites {
+    background: #3699D0;
+    height: 500px;
+}
+
+.specialites .container>h1 {
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 20px;
+    color: #FBFDFF;
+    font-size: 60px;
+}
+
+.specialites .container>.row .col-2 {
+    animation: background 0.3s seas, transform 0.2s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    background: #fff;
+    color: #FBFDFF;
+    height: 300px;
+}
+
+.specialites .container>.row {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    display: grid;
+    gap: 20px;
+}
+
+.col-2 .titre {
+    padding-bottom: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #035097;
+    padding: 30px;
+}
+
+.col-2 .pText {
+    color: #373C3E;
+    padding-left: 20px;
+    line-height: 1.5;
+    padding-top: 0;
+}
+
+.col-2 h3 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #5F6A70;
+    padding: 30px;
+}
+
+.col-2>ul li {
+    transition: color 0.3s ease, transform 0.2s ease;
+    transform: translateX(5px);
+    list-style-type: disc;
+    color: #5F6A70;
+    cursor: pointer;
+    padding-left: 0;
+    line-height: 2;
+}
+
+.col-2>ul li:hover {
+    color: #0078E8
+}
+
+.col-2>ul {
+    padding-left: 50px;
+}
+
+/* style pour la section prémium */
+.cPremium {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.card2 {
+    box-shadow: rgba(69, 69, 69, 0.2) 0px 2px 8px 0px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    background: #98b3b9;
+    text-align: center;
+    max-height: 300px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.card2:hover {
+    box-shadow: rgba(69, 69, 69, 0.2) 0px 2px 8px 0px;
+    animation: background-color 0.4s ease;
+    background: #a8b8bb;
+    transform: scale(1.1);
+    text-align: center;
+    max-height: 300px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.card2 h1 {
+    color: rgba(229, 245, 247, 0.979);
+    padding: 20px;
+}
+
+.card2 p {
+    color: rgba(229, 245, 247, 0.979);
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.card1 .h1Premium {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+}
+
+.card1 .pPremium {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* style pour le dernier article */
+#row-dArticle {
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+#row-dArticle:hover {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transform: scale(1);
+    border-radius: 5px;
+    transition: 0.8s;
+}
+
+.hr-dArticle {
+    height: 4px;
+    background: rgb(240, 240, 240);
+    border: 0;
+}
+
+.dernierArt h1 {
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+.separateur {
+    padding-top: 30px;
+}
+
+.col-2 .pArticle {
+    padding-bottom: 20px;
+}
+
+.dArticleTitre {
+    padding-top: 0 !important;
+    text-align: left;
+    cursor: pointer;
+
+}
+
+.dArticleTitre:hover {
+    transition: color 0.3s ease, transform 0.2s ease;
     color: #0078E8;
 }
-.container .welcome .btnConnecter a:hover{
-    text-decoration: none;
+
+
+/* Style pour le new letter */
+.newLetter {
+    margin-bottom: 133px;
+    padding: 40px;
+}
+
+.newL {
+    align-items: center;
+}
+
+.newL .input {
+    justify-content: right;
+}
+
+.paragraphe {
+    flex: 1;
+}
+
+.paragraphe span {
+    color: #F0CA04;
+}
+
+.paragraphe p {
+    font-size: 22px;
+}
+
+.paragraphe h1 {
+    font-weight: bold;
+    color: #0BA4C6;
+    font-size: 40px;
+    min-height: 0%;
+}
+
+.input {
+    text-align: right;
+    flex: 1;
+}
+
+.newL input {
     padding: 10px;
-    font-weight: bolder;
+    width: 80%;
+}
+
+.newL button {
+    border: 1px solid #03596d;
+    background: #03596d;
+    border-radius: 5px;
+    padding-left: 0;
+    margin-left: 0;
     color: #fff;
+    width: 100px;
+    height: 43px;
+}
+
+.newL button:hover {
+    transition: color 0.3s ease, transform 0.2s ease;
+    background: #007c98;
+    transform: scale(1.1);
+
+}
+
+/* style pour footer */
+#my-hr {
+    background-color: rgb(231, 231, 231);
+    border: none;
+    height: 4px;
+}
+
+footer .row {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    padding-top: 30px;
+    display: grid;
+}
+
+footer .row {
+    display: flex !important;
+}
+
+footer .menu {
+    width: 400px !important;
+    text-align: center;
+}
+
+footer .menu ul li {
+    list-style: none;
+
+}
+
+footer .menu ul {
+    justify-content: flex-end;
+    padding-left: 20px;
+}
+
+footer #p {
+    text-align: center;
+    padding: 30px;
+    color: red;
+}
+
+.footer {
+    background: #f7fafb;
+}
+
+.sociaux img {
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.sociaux {
+    width: 400px !important;
+    margin-left: auto;
+}
+
+.wekel {
+    width: 400px !important;
+}
+
+.wekel h2 {
+    color: rgb(43, 89, 89);
+    display: inline-block;
+    background: #0091ff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.wekel {
+    width: 100%;
+}
+
+.sociaux img:hover {
+    transition: filter 0.3s ease, transform 0.2s ease;
+    filter: grayscale(0);
+}
+
+@media only screen and (max-width:600px) {
+    .navBar {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .container .welcome {
+        display: block;
+    }
+
+    .container .row {
+        display: block;
+    }
+
+    .container .row img {
+        display: none;
+    }
+
+    .container .row .sociaux img {
+        display: block;
+    }
+
+    .container .row .sociaux #visite {
+        display: inline-block;
+    }
+
+    .container .row .sociaux #visible {
+        display: inline-block;
+    }
+
+    .sociaux {
+        text-align: center;
+        display: block;
+    }
+
+    .sociaux>h2 {
+        margin-top: 20px;
+    }
+
+    .container .row h1 {
+        text-align: center;
+    }
+
+    .container .row h1 {
+        text-align: center;
+    }
+
+    .container .row p {
+        text-align: center;
+    }
+
+    .container .row .buttons {
+        text-align: center;
+    }
+
+    .container .row .buttons a {
+        display: block;
+    }
+
+    .specialites .container>h1 {
+        font-size: 30px;
+    }
+
+    .specialites .container .row {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .specialites {
+        height: 740px;
+    }
+
+    #col-2 {
+        height: 260px;
+        width: 100%;
+    }
+
+    #col-2>h3 {
+        padding-bottom: 15px;
+    }
+
+    .card1 .h1Premium {
+        font-weight: bolder;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .card1 .pPremium {
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .newLetter {
+        margin-bottom: 55px !important;
+    }
+
+    .newL button {
+        border: 1px solid #03596d;
+        justify-content: center;
+        background: #03596d;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        padding-left: 0;
+        margin-left: 0;
+        color: #fff;
+        display: flex;
+        height: 43px;
+        width: 100%;
+
+    }
+
+    .newL input {
+        margin-bottom: 15px;
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    footer .row {
+        display: block !important;
+        padding-top: 0;
+    }
+
+    .wekel {
+        width: 400px !important;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .wekel>h2 {
+        margin-bottom: 15px;
+    }
+
+    footer .menu>h2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    footer {
+        justify-content: center;    /* Centrer verticalement */
+        flex-direction: column;     /* Aligner les éléments verticalement (colonne) */
+        align-items: center;        /* Centrer horizontalement */
+        text-align: center;         /* Centrer le texte à l'intérieur des éléments */
+        display: flex;              /* Appliquer Flexbox au footer */
+        padding: 20px;              /* Un peu d'espace autour */
+        width: 100%;                /* Assurer que le footer prend toute la largeur */
+    }
+
 }
